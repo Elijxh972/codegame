@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 Trouvez le mot de passe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game" class="game-container">
+    <h1>Trouvez le mot de passe</h1>
+    
+    <div class="status-row">
+      <span id="level">Niveau 1 / 5</span>
+      <span id="timer" class="timer">⏱ 30s</span>
+      <span id="score">Score: 100</span>
+    </div>
+
+    <div class="game-box">
+      <p id="clue" class="clue">Cliquez sur "Démarrer" pour commencer</p>
+      
+      <div id="hints" class="hints"></div>
+      
+      <input type="text" id="guess" class="input" placeholder="Entrez votre réponse..." />
+      
+      <p id="feedback" class="feedback"></p>
+    </div>
+
+    <div class="buttons">
+      <button id="startBtn" onclick="window.startGame()" class="btn btn-start">Démarrer</button>
+      <button id="validateBtn" onclick="window.makeGuess()" class="btn btn-validate" style="display:none;">Valider</button>
+      <button id="nextBtn" onclick="window.nextLevel()" class="btn btn-next" style="display:none;">Niveau suivant</button>
+      <button id="retryBtn" onclick="window.retryLevel()" class="btn btn-retry" style="display:none;">Réessayer</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
